@@ -11,9 +11,9 @@ async function fetchUsers () {
 async function HomePage () {
   const users = await fetchUsers()
   return (
-    <ul>
+    <ul className="">
       {users.map(user => (
-        <li key={user.id}>
+        <li key={user.id} className="bg-slate-400 mb-2 p-4 rounded-md">
           <div>
             <h5>
               {user.id} {user.firstName} {user.lastName}
